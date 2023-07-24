@@ -40,3 +40,5 @@ export type SocialMedia =
   | "Steam"
   | "Telegram"
   | "Mastodon";
+("Misskey");
+("RSS");

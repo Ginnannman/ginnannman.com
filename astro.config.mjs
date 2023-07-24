@@ -4,38 +4,50 @@ import react from "@astrojs/react";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
+import compress from "astro-compress";
+import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
+import remarkGemoji from "remark-gemoji";
+import remarkRehype from "remark-rehype/lib";
+import remarkGfm from "remark-gfm";
+import remarkJaruby from "remark-jaruby";
+import rehypeExternalLinks from "rehype-external-links";
+import mdx from "@astrojs/mdx";
+import rehypeKatex from "rehype-katex";
+
+import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-paper.pages.dev/", // replace this with your deployed domain
-  integrations: [
-    tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
-    }),
-    react(),
-    sitemap(),
-  ],
+  site: "https://ginnannman.com/",
+  // replace this with your deployed domain
+  integrations: [tailwind({
+    config: {
+      applyBaseStyles: false
+    }
+  }), react(), sitemap(), compress(), mdx(), image({
+    serviceEntryPoint: '@astrojs/image/sharp',
+  })],
   markdown: {
-    remarkPlugins: [
-      remarkToc,
-      [
-        remarkCollapse,
-        {
-          test: "Table of contents",
-        },
-      ],
-    ],
+    remarkPlugins: [remarkToc, remarkGemoji, remarkGfm, remarkJaruby, [remarkCollapse, {
+      test: "Table of Contents"
+    }]],
+    rehypePlugins: [rehypeAccessibleEmojis, rehypeKatex, [rehypeExternalLinks, {
+      target: "_blank",
+      rel: ["nofollow noopener noreferrer"]
+    }]],
     shikiConfig: {
       theme: "one-dark-pro",
-      wrap: true,
+      wrap: true
     },
-    extendDefaultPlugins: true,
+    remarkRehype: {
+      footnoteLabel: "脚注",
+      footnoteLabelProperties: 'h2'
+    },
+    extendDefaultPlugins: true
   },
   vite: {
     optimizeDeps: {
-      exclude: ["@resvg/resvg-js"],
-    },
-  },
+      exclude: ["@resvg/resvg-js"]
+    }
+  }
 });

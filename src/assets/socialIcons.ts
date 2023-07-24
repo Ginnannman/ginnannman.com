@@ -1,6 +1,18 @@
 import type { SocialIcons } from "../types";
 
 const socialIcons: SocialIcons = {
+  RSS: `
+<svg xmlns="http://www.w3.org/2000/svg"
+stroke-linecap="round"
+stroke-linejoin="round"
+>
+<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path
+    d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
+  ></path><path
+    d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
+  ></path><circle cx="6" cy="18" r="2"></circle>
+</svg>`,
   Github: `<svg
     xmlns="http://www.w3.org/2000/svg"
     class="icon-tabler"
@@ -208,6 +220,7 @@ const socialIcons: SocialIcons = {
   q-43 -8 -67 -30q-29 -25 -35 -72q-2 -14 -2 -29l25 6q31 6 65 10q48 7 93 9q42 2 92 -2q32 -2 88 -9t107 -30q49 -23 81.5 -54.5t38.5 -63.5q9 -45 13 -109q4 -46 5 -97v-41q0 -56 -14 -103q-11 -40 -32 -73q-16 -26 -38 -47q-15 -15 -32 -25q-12 -8 -14 -8
   q-46 -22 -127 -33q-74 -10 -166 -11h-3zM367 267q73 0 109 56l24 39l24 -39q36 -56 109 -56q63 0 101 43t38 117v239h-95v-232q0 -74 -61 -74q-69 0 -69 88v127h-94v-127q0 -88 -69 -88q-61 0 -61 74v232h-95v-239q0 -74 38 -117t101 -43z" />
   </svg>`,
+  Misskey: `<svg class="icon-tabler" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><defs><style>.a,.b,.c{fill:none;stroke:#000;}.a,.c{stroke-linecap:round;}.a{stroke-linejoin:round;}.b,.c{stroke-miterlimit:5.052;}</style></defs><circle class="a" cx="39.3933" cy="14.7656" r="4.1063"/><path class="a" d="M4.5,15.2945A4.6346,4.6346,0,0,1,9.135,10.66c2.56,0,3.2261,1.2715,4.0015,2.2487L22.229,24.5861"/><path class="a" d="M32.8082,32.7058a4.6345,4.6345,0,1,1-9.269,0"/><path class="b" d="M4.5,32.7058V15.2934"/><path class="a" d="M14.9913,29.7256,13.7691,28.153v4.5531a4.6346,4.6346,0,0,1-9.2691,0"/><path class="a" d="M23.54,32.7058V28.1527l-1.2222,1.5727"/><path class="a" d="M8.2378,21.0358,13.77,28.1533"/><path class="a" d="M23.54,28.1528l5.6048-7.2243"/><path class="b" d="M14.9913,29.7256s3.3789,4.8348,7.3256,0"/><path class="c" d="M8.27,21.0684c-1.5478-1.93-3.46-.7345-3.7609,1.0781"/><path class="c" d="M22.23,24.5859c1.4448,1.67,3.2924,1.1495,4.3789-.3829"/><path class="c" d="M29.1444,20.9283a2.0456,2.0456,0,0,1,3.6526.3295"/><path class="c" d="M16.5167,17.2212c1.4276,1.8926,2.8478,1.9305,4.3507.0584l3.5432-4.5832c.6881-.8126,1.2038-2.0367,3.7633-2.0367a4.6346,4.6346,0,0,1,4.6346,4.6345V32.7067"/><path class="b" d="M39.3923,20.646a4.1055,4.1055,0,0,0-4.1059,4.1059v8.4829a4.1068,4.1068,0,0,0,8.2136,0V24.7519A4.1071,4.1071,0,0,0,39.3923,20.646Z"/></svg>`,
 };
 
 export default socialIcons;

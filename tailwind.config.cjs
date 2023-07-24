@@ -57,7 +57,8 @@ module.exports = {
       transparent: "transparent",
     },
     fontFamily: {
-      mono: ["IBM Plex Mono", "monospace"],
+      all: ["Helvetica Neue", "Arial" ,"Hiragino Kaku Gothic ProN" ,"Hiragino Sans" ,"Meiryo" ,"sans-serif"],
+      code: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
     },
     // },
   },

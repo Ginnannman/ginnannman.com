@@ -12,13 +12,12 @@ import LinkButton from "@components/LinkButton.astro";
   <main id="main-content">
     <div class="not-found-wrapper">
       <h1 aria-label="404 Not Found">404</h1>
-      <span aria-hidden="true">¯\_(ツ)_/¯</span>
-      <p>Page Not Found</p>
+      <p>Warum ist überhaupt Seiendes und nicht vielmehr Nichts?</p>
       <LinkButton
         href="/"
-        className="my-6 underline decoration-dashed underline-offset-8 text-lg"
+        className="my-6 underline decoration-solid underline-offset-8 text-lg"
       >
-        Go back home
+        Back to Top
       </LinkButton>
     </div>
   </main>
@@ -34,9 +33,9 @@ import LinkButton from "@components/LinkButton.astro";
     @apply mb-14 flex flex-col items-center justify-center;
   }
   .not-found-wrapper h1 {
-    @apply text-9xl font-bold text-skin-accent;
+    @apply text-9xl font-bold;
   }
   .not-found-wrapper p {
-    @apply mt-4 text-2xl sm:text-3xl;
+    @apply mt-4 text-2xl sm:text-3xl justify-center text-center;
   }
 </style>
