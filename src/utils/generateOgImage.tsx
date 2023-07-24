@@ -6,13 +6,13 @@ import { Resvg } from "@resvg/resvg-js";
 const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch(
-    "https://www.1001fonts.com/download/font/ibm-plex-mono.regular.ttf"
+    "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Noto+Sans:wght@100&display=swap"
   );
   const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
   // Bold Font
   const fontFileBold = await fetch(
-    "https://www.1001fonts.com/download/font/ibm-plex-mono.bold.ttf"
+    "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@800&family=Noto+Sans:wght@100&display=swap"
   );
   const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
 
@@ -121,15 +121,15 @@ const options: SatoriOptions = {
   embedFont: true,
   fonts: [
     {
-      name: "IBM Plex Mono",
+      name: "Noto Sans Japanese",
       data: fontRegular,
-      weight: 400,
+      weight: 500,
       style: "normal",
     },
     {
-      name: "IBM Plex Mono",
+      name: "Noto Sans Japanese",
       data: fontBold,
-      weight: 600,
+      weight: 800,
       style: "normal",
     },
   ],
