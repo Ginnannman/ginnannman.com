@@ -34,4 +34,4 @@ pnpm-debug.log*
 !.yarn/versions
 .pnp.*
 
-fonts/
+public/assets

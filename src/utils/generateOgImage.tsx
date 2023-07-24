@@ -6,13 +6,13 @@ import { Resvg } from "@resvg/resvg-js";
 const fetchFonts = async () => {
   // Regular Font
   const fontFileRegular = await fetch(
-    "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Noto+Sans:wght@100&display=swap"
+    "https://www.1001fonts.com/download/font/ibm-plex-mono.regular.ttf"
   );
   const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
 
   // Bold Font
   const fontFileBold = await fetch(
-    "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@800&family=Noto+Sans:wght@100&display=swap"
+    "https://www.1001fonts.com/download/font/ibm-plex-mono.bold.ttf"
   );
   const fontBold: ArrayBuffer = await fontFileBold.arrayBuffer();
 
@@ -74,10 +74,12 @@ const ogImage = (text: string) => {
         >
           <p
             style={{
+              display: "flex",
               fontSize: 72,
               fontWeight: "bold",
-              maxHeight: "84%",
+              width: "100%",
               overflow: "hidden",
+              letterSpacing: "0.25em",
             }}
           >
             {text}
@@ -118,18 +120,19 @@ const ogImage = (text: string) => {
 const options: SatoriOptions = {
   width: 1200,
   height: 630,
-  embedFont: true,
+  fontFamily: "Inter",
+  embedFont: false,
   fonts: [
     {
-      name: "Noto Sans Japanese",
+      name: "IBM Plex Mono",
       data: fontRegular,
-      weight: 500,
+      weight: 400,
       style: "normal",
     },
     {
-      name: "Noto Sans Japanese",
+      name: "IBM Plex Mono",
       data: fontBold,
-      weight: 800,
+      weight: 600,
       style: "normal",
     },
   ],
