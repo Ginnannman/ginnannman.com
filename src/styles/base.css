@@ -37,7 +37,7 @@
     @apply mx-auto max-w-3xl px-4;
   }
   a {
-    @apply outline-2 outline-offset-1 outline-skin-fill font-normal
+    @apply outline-2 outline-offset-1 outline-skin-fill font-normal break-words
     focus-visible:no-underline focus-visible:outline-dashed ;
   }
   svg {

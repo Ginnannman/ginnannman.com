@@ -1,4 +1,4 @@
----
+「---
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
@@ -13,7 +13,7 @@ export interface Props {
 
 const { post } = Astro.props;
 
-const { title, author, description, ogImage, pubDatetime, tags } = post.data;
+const { title, author, description, ogImage, pubDatetime, tags} = post.data;
 
 const { Content } = await post.render();
 

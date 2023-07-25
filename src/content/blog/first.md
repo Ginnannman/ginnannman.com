@@ -8,6 +8,7 @@ tags:
   - others
 ogImage: ""
 description: ブログをはじめました。
+modDatetime: 2023-07-25
 ---
 
 ### Table of contents
@@ -70,6 +71,6 @@ astro で SSG（静的サイト生成）をしている。[AstroPaper](https://g
 
 ## その他
 
-コードはGitHubにあげました[^1]。
+コードは GitHub にあげました[^1]。
 
 [^1]: <https://github.com/ginnannman/ginnannman.com>
