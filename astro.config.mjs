@@ -13,20 +13,18 @@ import remarkJaruby from "remark-jaruby";
 import rehypeExternalLinks from "rehype-external-links";
 import mdx from "@astrojs/mdx";
 import rehypeKatex from "rehype-katex";
-
 import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://ginnannman.com/",
-  // replace this with your deployed domain
   integrations: [tailwind({
     config: {
       applyBaseStyles: false
     }
-  }), react(), sitemap(), compress(), mdx(), image({
+  }), react(), sitemap(), mdx(), image({
     serviceEntryPoint: '@astrojs/image/sharp',
-  })],
+  }), compress()],
   markdown: {
     remarkPlugins: [remarkToc, remarkGemoji, remarkGfm, remarkJaruby, [remarkCollapse, {
       test: "Table of Contents"

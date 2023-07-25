@@ -70,4 +70,6 @@ astro で SSG（静的サイト生成）をしている。[AstroPaper](https://g
 
 ## その他
 
-コードはGitHubにあげました。
+コードはGitHubにあげました[^1]。
+
+[^1]: <https://github.com/ginnannman/ginnannman.com>
