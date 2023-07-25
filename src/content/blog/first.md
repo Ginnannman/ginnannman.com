@@ -5,7 +5,7 @@ postSlug: first
 featured: false
 draft: false
 tags:
-  - other
+  - others
 ogImage: ""
 description: ブログをはじめました。
 ---
@@ -20,7 +20,7 @@ description: ブログをはじめました。
 
 astro で SSG（静的サイト生成）をしている。[AstroPaper](https://github.com/satnaing/astro-paper)を下地に作成した。理由は、自力ではうまいこと一覧系のページのページネーションができなかったため。
 
-サイトのスタイルは[mythfinder（haxibami.net）](https://haxibami.net)にかなり多くの影響を受けている。
+サイトのスタイルは[mythfinder（haxibami.net）](https://www.haxibami.net)にかなり多くの影響を受けている。
 
 ### ライブラリ
 
