@@ -8,6 +8,7 @@ tags:
   - tests
 ogImage: ""
 description: ブログを書くときはこのファイルをコピーして始めよう。
+modDatetime: 2023-07-26
 ---
 
 Here are some rules/recommendations, tips & ticks for creating new posts in AstroPaper blog theme.

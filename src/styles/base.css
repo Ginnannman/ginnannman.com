@@ -51,8 +51,8 @@
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base 
     prose-p:!text-skin-base 
-    hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent
-    prose-blockquote:border-opacity-50 prose-blockquote:opacity-80
+    hover:prose-a:text-skin-accent prose-blockquote:!border-l-8 prose-blockquote:!not-italic
+    prose-blockquote:opacity-80  prose-blockquote:!border-skin-line
     prose-figcaption:!text-skin-base prose-figcaption:opacity-70
     prose-strong:!text-skin-base
 

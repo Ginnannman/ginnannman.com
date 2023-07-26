@@ -1,4 +1,4 @@
-「---
+---
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
@@ -6,6 +6,7 @@ import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
+import ModDatetime from "@components/ModDatetime";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -13,7 +14,7 @@ export interface Props {
 
 const { post } = Astro.props;
 
-const { title, author, description, ogImage, pubDatetime, tags} = post.data;
+const { title, author, description, ogImage, pubDatetime, tags, modDatetime} = post.data;
 
 const { Content } = await post.render();
 
@@ -37,7 +38,8 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   </div>
   <main id="main-content">
     <h1 class="post-title">{title}</h1>
-    <Datetime datetime={pubDatetime} size="lg" className="my-2" />
+    <Datetime datetime={pubDatetime} size="lg" className="my-2" /> 
+    <ModDatetime datetime={modDatetime} size="lg" className="my-2" />
     <ul class="tags-container">
       {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
     </ul>
