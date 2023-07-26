@@ -18,34 +18,55 @@ import image from "@astrojs/image";
 // https://astro.build/config
 export default defineConfig({
   site: "https://ginnannman.com/",
-  integrations: [tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  }), react(), sitemap(), mdx(), image({
-    serviceEntryPoint: '@astrojs/image/sharp',
-  }), compress()],
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    react(),
+    sitemap(),
+    mdx(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    compress(),
+  ],
   markdown: {
-    remarkPlugins: [remarkToc, remarkGemoji, remarkGfm, remarkJaruby, [remarkCollapse, {
-      test: "Table of Contents"
-    }]],
-    rehypePlugins: [rehypeAccessibleEmojis, rehypeKatex, [rehypeExternalLinks, {
-      target: "_blank",
-      rel: ["nofollow noopener noreferrer"]
-    }]],
+    remarkPlugins: [
+      remarkToc,
+      remarkGemoji,
+      remarkGfm,
+      remarkJaruby,
+      [
+        remarkCollapse,
+        {
+          test: "Table of Contents",
+        },
+      ],
+    ],
+    rehypePlugins: [
+      rehypeAccessibleEmojis,
+      rehypeKatex,
+      [
+        rehypeExternalLinks,
+        {
+          target: "_blank",
+          rel: ["nofollow noopener noreferrer"],
+        },
+      ],
+    ],
     shikiConfig: {
       theme: "one-dark-pro",
-      wrap: true
+      wrap: true,
     },
     remarkRehype: {
       footnoteLabel: "脚注",
-      footnoteLabelProperties: 'h2'
+      footnoteLabelProperties: "h2",
     },
-    extendDefaultPlugins: true
+    extendDefaultPlugins: true,
   },
   vite: {
     optimizeDeps: {
-      exclude: ["@resvg/resvg-js"]
-    }
-  }
+      exclude: ["@resvg/resvg-js"],
+    },
+  },
 });
