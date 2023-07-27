@@ -9,6 +9,9 @@ export default function ModDatetime({
   size = "sm",
   className,
 }: Props) {
+  if (!datetime) {
+    return null;
+  }
   return (
     <div className={`flex items-center opacity-80 ${className}`}>
       <span>Last Modified on:&nbsp;</span>

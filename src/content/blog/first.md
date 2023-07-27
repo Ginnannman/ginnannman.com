@@ -6,6 +6,7 @@ featured: false
 draft: false
 tags:
   - others
+  - tech
 ogImage: ""
 description: ブログをはじめました。
 modDatetime: 2023-07-25
