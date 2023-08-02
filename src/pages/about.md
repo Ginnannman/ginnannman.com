@@ -4,7 +4,7 @@ title: "About"
 description: "名前、所属、連絡先、インターネット人格での仕事等"
 ---
 
-2023/07/06 初版、2023/07/22 改稿
+2023/07/06 初版、2023/08/02 改稿
 
 ## Table of Contents
 
@@ -43,7 +43,7 @@ Leaflet.js を用いて、様々な地図タイル等を表示できる。
 ## 諸連絡先
 
 - メール：contact"あっと"ginnannman.com
-- Twitter：[@Ginnannman](https://twitter.com/ginnannman)
+- X：[@Ginnannman](https://x.com/ginnannman)
 - Activity Pub：[@Ginnannman@mi.ginnannman.com](https://mi.ginnannman.com/@Ginnannman)―メインで使用。私が立てたサーバー。興味がある方には招待コードを出す用意はある。
 - Activity Pub（予備 1）：[@Ginnannman@misskey.io](https://misskey.io/@Ginnannman)―保険。
 - Activity Pub（予備 2）：[@Ginnannman@mstdn.jp](https://mstdn.jp/@Ginnannman)―よほどのことがない限り使わない。
@@ -53,7 +53,7 @@ Leaflet.js を用いて、様々な地図タイル等を表示できる。
 ### その他アカウントの所在地
 
 - はてなブログ：[おじさん(^^;の戯言](https://ginnannman.hateblo.jp/)―更新が滞っている。ここでブログを書きやすくしたので、ここに移行させる可能性は十分にある。
-- GitHub：[Github/Ginnannman](https://github.com/ginnannman)―進捗があったりなかったり。過去に QGIS のプラグインを試しに作った際の遺物等がある。
+- GitHub：[Github/Ginnannman](https://github.com/ginnannman)―進捗があったりなかったり。過去に QGIS のプラグインを試しに作った際の遺物等がある。このサイトのソースもある。
 
 ## その他
 
