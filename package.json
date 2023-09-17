@@ -24,7 +24,7 @@
     "fuse.js": "^6.6.2",
     "github-slugger": "^2.0.0",
     "rehype-accessible-emojis": "^0.3.2",
-    "rehype-external-links": "^2.1.0",
+    "rehype-external-links": "^3.0.0",
     "rehype-katex": "^6.0.3",
     "remark-collapse": "^0.1.2",
     "remark-gemoji": "^7.0.1",
