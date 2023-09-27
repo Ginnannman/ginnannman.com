@@ -28,7 +28,7 @@
     "rehype-katex": "^7.0.0",
     "remark-collapse": "^0.1.2",
     "remark-gemoji": "^8.0.0",
-    "remark-gfm": "^3.0.1",
+    "remark-gfm": "^4.0.0",
     "remark-jaruby": "^0.1.0",
     "remark-rehype": "^10.1.0",
     "remark-toc": "^9.0.0",
