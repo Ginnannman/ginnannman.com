@@ -28,7 +28,7 @@ astro で SSG（静的サイト生成）をしている。[AstroPaper](https://g
 
 以下の一覧を見ると早い。概ね md/mdx がちゃんと動くといいな、快適になりたいな、という拡張をしている。
 
-```txt
+```js
 "dependencies": {
     "@astrojs/image": "^0.17.2",
     "@astrojs/mdx": "^0.19.7",

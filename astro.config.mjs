@@ -13,7 +13,6 @@ import remarkJaruby from "remark-jaruby";
 import rehypeExternalLinks from "rehype-external-links";
 import mdx from "@astrojs/mdx";
 import rehypeKatex from "rehype-katex";
-import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,9 +24,6 @@ export default defineConfig({
     react(),
     sitemap(),
     mdx(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
     compress(),
   ],
   markdown: {
