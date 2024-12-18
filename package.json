@@ -15,11 +15,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.19.7",
+    "@astrojs/mdx": "^4.0.2",
     "@astrojs/rss": "^4.0.0",
     "@resvg/resvg-js": "^2.4.1",
     "@swc/core": "^1.7.26",
-    "astro": "^3.0.13",
+    "astro": "^5.0.9",
     "astro-compress": "^2.0.5",
     "fuse.js": "^7.0.0",
     "github-slugger": "^2.0.0",
