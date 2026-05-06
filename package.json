@@ -43,7 +43,7 @@
     "@divriots/jampack": "^0.33.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/github-slugger": "^2.0.0",
-    "@types/react": "^18.2.6",
+    "@types/react": "^19.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "astro-eslint-parser": "^1.0.0",
     "commitizen": "^4.3.0",
@@ -54,8 +54,8 @@
     "lint-staged": "^16.0.0",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.6.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "config": {
     "commitizen": {
