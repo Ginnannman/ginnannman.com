@@ -39,6 +39,6 @@ export type SocialMedia =
   | "Skype"
   | "Steam"
   | "Telegram"
-  | "Mastodon";
-("Misskey");
-("RSS");
+  | "Mastodon"
+  | "Misskey" // 追加: union型から漏れていたため socialIcons.ts と不整合が生じていた
+  | "RSS"; // 追加: 同上

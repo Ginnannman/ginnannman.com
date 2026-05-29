@@ -2,6 +2,11 @@
 import { LOGO_IMAGE, SITE } from "@config";
 import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
+// ロゴ画像は public/ 以下なので URL パスで参照する
+// （src/assets/ 経由でimportする場合は Astro の画像最適化パイプラインを通る）
+const logoSVG = "/assets/logo.svg";
+const logoPNG = "/assets/logo.png";
+
 export interface Props {
   activeNav?: "posts" | "tags" | "about" | "search";
 }
@@ -92,6 +97,7 @@ const { activeNav } = Astro.props;
 </header>
 
 <style>
+  @reference "../styles/base.css";
   #skip-to-content {
     @apply absolute -top-full left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus:top-4;
   }

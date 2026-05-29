@@ -9,10 +9,12 @@ import LinkButton from "@components/LinkButton.astro";
 <Layout title={`404 Not Found | ${SITE.title}`}>
   <Header />
 
-  <main id="main-content">
-    <div class="not-found-wrapper">
-      <h1 aria-label="404 Not Found">404</h1>
-      <p>Warum ist überhaupt Seiendes und nicht vielmehr Nichts?</p>
+  <main id="main-content" class="mx-auto flex max-w-3xl flex-1 items-center justify-center">
+    <div class="mb-14 flex flex-col items-center justify-center">
+      <h1 aria-label="404 Not Found" class="text-9xl font-bold">404</h1>
+      <p class="mt-4 text-2xl sm:text-3xl justify-center text-center">
+        Warum ist überhaupt Seiendes und nicht vielmehr Nichts?
+      </p>
       <LinkButton
         href="/"
         className="my-6 underline decoration-solid underline-offset-8 text-lg"
@@ -21,21 +23,5 @@ import LinkButton from "@components/LinkButton.astro";
       </LinkButton>
     </div>
   </main>
-
   <Footer />
 </Layout>
-
-<style>
-  #main-content {
-    @apply mx-auto flex max-w-3xl flex-1 items-center justify-center;
-  }
-  .not-found-wrapper {
-    @apply mb-14 flex flex-col items-center justify-center;
-  }
-  .not-found-wrapper h1 {
-    @apply text-9xl font-bold;
-  }
-  .not-found-wrapper p {
-    @apply mt-4 text-2xl sm:text-3xl justify-center text-center;
-  }
-</style>

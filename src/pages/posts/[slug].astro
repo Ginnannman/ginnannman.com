@@ -1,5 +1,6 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import Posts from "@layouts/Posts.astro";
 import PostDetails from "@layouts/PostDetails.astro";
 import getSortedPosts from "@utils/getSortedPosts";
@@ -30,15 +31,20 @@ const { slug } = Astro.params;
 const { post } = Astro.props;
 
 const posts = await getCollection("blog");
-
 const sortedPosts = getSortedPosts(posts);
-
 const totalPages = getPageNumbers(sortedPosts.length);
 
 const currentPage =
   slug && !isNaN(Number(slug)) && totalPages.includes(Number(slug))
     ? Number(slug)
     : 0;
+
+// currentPage === 0 かつ post も undefined の場合はビルド時に getStaticPaths で
+// 除外されているため到達しないが、念のためガードする
+if (!post && currentPage === 0) {
+  return Astro.redirect("/404");
+}
+
 const lastPost = currentPage * SITE.postPerPage;
 const startPost = lastPost - SITE.postPerPage;
 
@@ -53,7 +59,6 @@ const paginatedPosts = sortedPosts.slice(startPost, lastPost);
       posts={paginatedPosts}
       pageNum={currentPage}
       totalPages={totalPages.length}
-      
     />
   )
 }
