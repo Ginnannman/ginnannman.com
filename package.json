@@ -51,7 +51,7 @@
     "eslint": "^10.0.0",
     "eslint-plugin-astro": "^1.0.0",
     "husky": "^9.0.0",
-    "lint-staged": "^16.0.0",
+    "lint-staged": "^17.0.0",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "react": "^19.0.0",
