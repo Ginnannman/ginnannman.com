@@ -40,7 +40,7 @@
   "devDependencies": {
     "@astrojs/react": "^4.0.0",
     "@astrojs/sitemap": "^3.0.0",
-    "@divriots/jampack": "^0.33.0",
+    "@divriots/jampack": "^0.34.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/github-slugger": "^2.0.0",
     "@types/react": "^19.0.0",
