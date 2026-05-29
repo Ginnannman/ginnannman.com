@@ -38,10 +38,15 @@
 @utility fill-skin-base { fill: rgb(var(--color-text-base)); }
 @utility fill-skin-accent { fill: rgb(var(--color-accent)); }
 
-/* focus-outline も @apply で使うため @utility 化（focus-visible 変種を内包） */
+/* focus-outline: キーボード操作でフォーカスされたときだけアウトラインを表示。
+   v4 では outline-2 が outline-style:solid を含むため、常時表示を避けて
+   :focus-visible に閉じ込め、線種・色は素の CSS で明示して曖昧さをなくす。 */
 @utility focus-outline {
-  @apply outline-2 outline-offset-1 focus-visible:no-underline focus-visible:outline-dashed;
-  outline-color: rgb(var(--color-accent));
+  &:focus-visible {
+    @apply no-underline;
+    outline: 2px dashed rgb(var(--color-accent));
+    outline-offset: 1px;
+  }
 }
 
 @layer base {
@@ -83,8 +88,12 @@
     @apply mx-auto max-w-3xl px-4;
   }
   a {
-    @apply outline-2 outline-offset-1 outline-skin-fill font-normal break-words
-    focus-visible:no-underline focus-visible:outline-dashed;
+    @apply font-normal break-words;
+  }
+  a:focus-visible {
+    @apply no-underline;
+    outline: 2px dashed rgb(var(--color-accent));
+    outline-offset: 1px;
   }
   svg {
     @apply inline-block h-6 w-6 fill-skin-base group-hover:fill-skin-accent;
