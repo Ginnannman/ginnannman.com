@@ -48,7 +48,7 @@
     "astro-eslint-parser": "^1.0.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^9.0.0",
+    "eslint": "^10.0.0",
     "eslint-plugin-astro": "^1.0.0",
     "husky": "^9.0.0",
     "lint-staged": "^16.0.0",
