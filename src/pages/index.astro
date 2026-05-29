@@ -14,7 +14,7 @@ import { SOCIALS } from "@config";
 const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+// featuredPosts は現在UIで使用されていないため削除
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
@@ -24,7 +24,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <main id="main-content">
     <section id="hero">
       <h1>ぎんなんまんのHP（仮？）</h1>
-  
 
       <p>
         なにかいい感じのことを思いついたらここに書く
@@ -75,6 +74,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 </Layout>
 
 <style>
+  @reference "../styles/base.css";
   /* ===== Hero Section ===== */
   #hero {
     @apply pb-6 pt-8;

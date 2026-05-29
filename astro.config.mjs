@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
@@ -18,9 +18,8 @@ import rehypeKatex from "rehype-katex";
 export default defineConfig({
   site: "https://ginnannman.com/",
   integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
+    // @astrojs/tailwind は削除（Tailwind v4 で deprecated）
+    // Tailwind は vite.plugins で読み込む（下記）
     react(),
     sitemap(),
     mdx(),
@@ -58,9 +57,10 @@ export default defineConfig({
       footnoteLabel: "脚注",
       footnoteLabelProperties: "h2",
     },
-    extendDefaultPlugins: true,
+    // extendDefaultPlugins は Astro v2 で廃止済みのため削除
   },
   vite: {
+    plugins: [tailwindcss()],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },

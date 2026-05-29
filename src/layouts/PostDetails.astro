@@ -5,6 +5,7 @@ import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
 import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ModDatetime from "@components/ModDatetime";
 
@@ -14,9 +15,11 @@ export interface Props {
 
 const { post } = Astro.props;
 
-const { title, author, description, ogImage, pubDatetime, tags, modDatetime} = post.data;
+const { title, author, description, ogImage, pubDatetime, tags, modDatetime } =
+  post.data;
 
-const { Content } = await post.render();
+// Astro v5: post.render() → render(post)
+const { Content } = await render(post);
 
 const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   .href;
@@ -38,13 +41,12 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   </div>
   <main id="main-content">
     <h1 class="post-title">{title}</h1>
-    <Datetime datetime={pubDatetime} size="lg" className="my-2" /> 
+    <Datetime datetime={pubDatetime} size="lg" className="my-2" />
     <ModDatetime datetime={modDatetime} size="lg" className="my-2" />
     <ul class="tags-container">
       {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
     </ul>
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
-
       <Content />
     </article>
   </main>
@@ -52,7 +54,8 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
 </Layout>
 
 <style>
-    .tags-container {
+  @reference "../styles/base.css";
+  .tags-container {
     @apply my-8;
   }
   main {
@@ -61,5 +64,4 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   .post-title {
     @apply text-2xl font-semibold text-skin-accent;
   }
-
 </style>
