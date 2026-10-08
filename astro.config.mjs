@@ -7,7 +7,6 @@ import sitemap from "@astrojs/sitemap";
 import compress from "astro-compress";
 import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import remarkGemoji from "remark-gemoji";
-import remarkRehype from "remark-rehype/lib";
 import remarkGfm from "remark-gfm";
 import remarkJaruby from "remark-jaruby";
 import rehypeExternalLinks from "rehype-external-links";
